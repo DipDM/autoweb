@@ -1,35 +1,28 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Header from '../src/components/header/header'; // Adjust the path if your file is in a different folder
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <div>
+      {/* Add Header Component */}
+      <Header />
 
-export default App
+      {/* Main Content */}
+      <main>
+        <section id="home" className="p-6">
+          <h1 className="text-2xl font-bold">Welcome to the Home Page. Good Morning Bidu</h1>
+        </section>
+        <section id="about" className="p-6">
+          <h1 className="text-2xl font-bold">About Us</h1>
+        </section>
+        <section id="services" className="p-6">
+          <h1 className="text-2xl font-bold">Our Services</h1>
+        </section>
+        <section id="contact" className="p-6">
+          <h1 className="text-2xl font-bold">Contact Us</h1>
+        </section>
+      </main>
+    </div>
+  );
+};
+
+export default App;
